@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nicolas Carello Laje | Data Scientist & AI/ML Engineer</title>
-  
+
   <!-- Google Fonts: Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -53,7 +56,7 @@
       }
     }
   </script>
-  
+
   <style>
     /* Google Search & Cloud style card surfaces */
     .g-card {
@@ -61,90 +64,113 @@
       border: 1px solid #dadce0;
       transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
+
     .g-card:hover {
       border-color: #bdc1c6;
       box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.3), 0 4px 8px 3px rgba(60, 64, 67, 0.12);
       transform: translateY(-2px);
     }
+
     .g-pill {
       border-radius: 9999px;
       transition: all 0.15s ease-in-out;
     }
+
     .g-pill:hover {
       background-color: #f1f3f4;
     }
+
     /* Google 4-color top ambient bar */
     .google-strip {
       background: linear-gradient(90deg, #4285f4 0%, #4285f4 25%, #ea4335 25%, #ea4335 50%, #fbbc05 50%, #fbbc05 75%, #34a853 75%, #34a853 100%);
       height: 3px;
     }
+
     /* Custom clean scrollbar */
     ::-webkit-scrollbar {
       width: 8px;
     }
+
     ::-webkit-scrollbar-track {
       background: #f8fafd;
     }
+
     ::-webkit-scrollbar-thumb {
       background: #dadce0;
       border-radius: 4px;
     }
+
     ::-webkit-scrollbar-thumb:hover {
       background: #bdc1c6;
     }
   </style>
 </head>
-<body class="bg-google-surfaceAlt text-google-textPrimary font-sans antialiased selection:bg-google-blueLight selection:text-google-blue min-h-screen relative flex flex-col">
+
+<body
+  class="bg-google-surfaceAlt text-google-textPrimary font-sans antialiased selection:bg-google-blueLight selection:text-google-blue min-h-screen relative flex flex-col">
 
   <!-- Google 4-color top bar -->
   <div class="google-strip fixed top-0 left-0 right-0 z-50"></div>
 
   <!-- Notification Toast Container -->
-  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
-    <div class="flex items-center gap-3 px-5 py-3 rounded-full bg-google-textPrimary text-white shadow-google-md text-sm font-medium">
+  <div id="toast"
+    class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+    <div
+      class="flex items-center gap-3 px-5 py-3 rounded-full bg-google-textPrimary text-white shadow-google-md text-sm font-medium">
       <div class="w-2 h-2 rounded-full bg-google-green"></div>
       <span id="toast-message">Copied to clipboard!</span>
     </div>
   </div>
 
-  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-google-borderSubtle transition-all duration-200">
+  <header
+    class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-google-borderSubtle transition-all duration-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      
+
       <!-- Logo / Name Badge with Profile Picture -->
       <a href="#" class="flex items-center gap-3 group">
         <div class="relative">
-          <img 
-            src="https://media.licdn.com/dms/image/v2/D4D03AQEBEoMRAHVF9Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1715729064200?e=1790812800&v=beta&t=DF2NRweeo-GBRT1hKZVGqSnnc8Azh20yVu1NbD6U5yY" 
-            alt="Nicolas Carello Laje" 
+          <img
+            src="https://media.licdn.com/dms/image/v2/D4D03AQEBEoMRAHVF9Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1715729064200?e=1790812800&v=beta&t=DF2NRweeo-GBRT1hKZVGqSnnc8Azh20yVu1NbD6U5yY"
+            alt="Nicolas Carello Laje"
             class="w-9 h-9 rounded-full object-cover border border-google-border shadow-sm group-hover:ring-2 group-hover:ring-google-blue transition-all"
-            onerror="this.onerror=null; this.src='https://placehold.co/100x100/1a73e8/ffffff?text=NC';"
-          />
-          <span class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 bg-google-green border-2 border-white rounded-full"></span>
+            onerror="this.onerror=null; this.src='https://placehold.co/100x100/1a73e8/ffffff?text=NC';" />
+          <span
+            class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 bg-google-green border-2 border-white rounded-full"></span>
         </div>
         <div>
           <div class="flex items-center gap-2">
-            <span class="font-semibold text-google-textPrimary text-base leading-tight group-hover:text-google-blue transition-colors">Nicolas Carello</span>
-            <span class="text-[11px] font-medium px-2 py-0.5 rounded-full bg-google-blueLight text-google-blue">AI & Data</span>
+            <span
+              class="font-semibold text-google-textPrimary text-base leading-tight group-hover:text-google-blue transition-colors">Nicolas
+              Carello</span>
+            <span class="text-[11px] font-medium px-2 py-0.5 rounded-full bg-google-blueLight text-google-blue">AI &
+              Data</span>
           </div>
-          <span class="text-xs text-google-textSecondary font-mono block">GCP • Vertex AI • ML Engineer</span>
         </div>
       </a>
 
       <!-- Desktop Navigation Links -->
       <nav class="hidden md:flex items-center gap-1 text-sm font-medium text-google-textSecondary">
-        <a href="#about" class="px-3.5 py-2 rounded-full hover:bg-google-surfaceSubtle hover:text-google-textPrimary transition-colors">About</a>
-        <a href="#skills" class="px-3.5 py-2 rounded-full hover:bg-google-surfaceSubtle hover:text-google-textPrimary transition-colors">Skills</a>
-        <a href="#experience" class="px-3.5 py-2 rounded-full hover:bg-google-surfaceSubtle hover:text-google-textPrimary transition-colors">Experience</a>
-        <a href="#projects" class="px-3.5 py-2 rounded-full hover:bg-google-surfaceSubtle hover:text-google-textPrimary transition-colors flex items-center gap-1.5">
+        <a href="#about"
+          class="px-3.5 py-2 rounded-full hover:bg-google-surfaceSubtle hover:text-google-textPrimary transition-colors">About</a>
+        <a href="#skills"
+          class="px-3.5 py-2 rounded-full hover:bg-google-surfaceSubtle hover:text-google-textPrimary transition-colors">Skills</a>
+        <a href="#experience"
+          class="px-3.5 py-2 rounded-full hover:bg-google-surfaceSubtle hover:text-google-textPrimary transition-colors">Experience</a>
+        <a href="#projects"
+          class="px-3.5 py-2 rounded-full hover:bg-google-surfaceSubtle hover:text-google-textPrimary transition-colors flex items-center gap-1.5">
           <span>Projects</span>
           <span class="w-1.5 h-1.5 rounded-full bg-google-blue animate-pulse"></span>
         </a>
-        <a href="#education" class="px-3.5 py-2 rounded-full hover:bg-google-surfaceSubtle hover:text-google-textPrimary transition-colors">Education</a>
-        <a href="#contact" class="px-3.5 py-2 rounded-full hover:bg-google-surfaceSubtle hover:text-google-textPrimary transition-colors">Contact</a>
+        <a href="#education"
+          class="px-3.5 py-2 rounded-full hover:bg-google-surfaceSubtle hover:text-google-textPrimary transition-colors">Education</a>
+        <a href="#contact"
+          class="px-3.5 py-2 rounded-full hover:bg-google-surfaceSubtle hover:text-google-textPrimary transition-colors">Contact</a>
       </nav>
 
       <!-- Mobile Menu Toggle Button -->
-      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-google-textSecondary hover:text-google-textPrimary hover:bg-google-surfaceSubtle focus:outline-none" aria-label="Toggle navigation">
+      <button id="mobile-menu-btn"
+        class="md:hidden p-2 rounded-lg text-google-textSecondary hover:text-google-textPrimary hover:bg-google-surfaceSubtle focus:outline-none"
+        aria-label="Toggle navigation">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
@@ -153,14 +179,21 @@
 
     <!-- Mobile Navigation Drawer -->
     <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-google-border px-6 py-4 space-y-2">
-      <a href="#about" class="mobile-link block py-2 text-google-textSecondary hover:text-google-blue font-medium">About</a>
-      <a href="#skills" class="mobile-link block py-2 text-google-textSecondary hover:text-google-blue font-medium">Skills</a>
-      <a href="#experience" class="mobile-link block py-2 text-google-textSecondary hover:text-google-blue font-medium">Experience</a>
-      <a href="#projects" class="mobile-link block py-2 text-google-textSecondary hover:text-google-blue font-medium">Projects</a>
-      <a href="#education" class="mobile-link block py-2 text-google-textSecondary hover:text-google-blue font-medium">Education</a>
-      <a href="#contact" class="mobile-link block py-2 text-google-textSecondary hover:text-google-blue font-medium">Contact</a>
+      <a href="#about"
+        class="mobile-link block py-2 text-google-textSecondary hover:text-google-blue font-medium">About</a>
+      <a href="#skills"
+        class="mobile-link block py-2 text-google-textSecondary hover:text-google-blue font-medium">Skills</a>
+      <a href="#experience"
+        class="mobile-link block py-2 text-google-textSecondary hover:text-google-blue font-medium">Experience</a>
+      <a href="#projects"
+        class="mobile-link block py-2 text-google-textSecondary hover:text-google-blue font-medium">Projects</a>
+      <a href="#education"
+        class="mobile-link block py-2 text-google-textSecondary hover:text-google-blue font-medium">Education</a>
+      <a href="#contact"
+        class="mobile-link block py-2 text-google-textSecondary hover:text-google-blue font-medium">Contact</a>
       <div class="pt-3 border-t border-google-borderSubtle">
-        <a href="mailto:nico.care96@gmail.com" class="block w-full py-2.5 text-center text-xs font-semibold rounded-full bg-google-blue text-white">
+        <a href="mailto:nico.care96@gmail.com"
+          class="block w-full py-2.5 text-center text-xs font-semibold rounded-full bg-google-blue text-white">
           Email Nicolas
         </a>
       </div>
@@ -171,28 +204,39 @@
     <section id="about" class="pt-6 pb-12 md:pt-8 md:pb-16 bg-white border-b border-google-borderSubtle">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          
+
           <!-- Left Column: Biography & Core Value -->
           <div class="lg:col-span-7 space-y-5">
-            
+
             <!-- Google Cloud Status Tag -->
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium bg-google-blueLight text-google-blue border border-google-blueBorder">
+            <div
+              class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium bg-google-blueLight text-google-blue border border-google-blueBorder">
               <span class="w-2 h-2 rounded-full bg-google-blue animate-pulse"></span>
               5+ Years Experience • End-to-End Data &amp; AI
             </div>
 
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-google-textPrimary tracking-tight leading-[1.12]">
+            <h1
+              class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-google-textPrimary tracking-tight leading-[1.12]">
               Data Scientist &amp; <br class="hidden sm:inline" /><span class="text-google-blue">AI/ML Engineer</span>
             </h1>
 
             <p class="text-base sm:text-lg text-google-textSecondary leading-relaxed font-normal">
-              Hi, I'm <strong class="text-google-textPrimary font-semibold">Nicolas Carello Laje</strong>. I help teams make sense of messy, complex data and turn it into intelligent products and clear business decisions. Over the last 5+ years, I’ve enjoyed working across every stage of that journey—from building automated cloud pipelines (BigQuery) and digging deep into <span class="text-google-yellow font-medium">exploratory analytics &amp; BI dashboards</span> (Looker Studio), to training predictive <span class="text-google-green font-medium">machine learning models</span> and deploying <span class="text-google-blue font-medium">production GenAI / LLM microservices</span> that people can actually rely on.
+              Hi, I'm <strong class="text-google-textPrimary font-semibold">Nicolas Carello Laje</strong>. I help teams
+              make sense of messy, complex data and turn it into intelligent products and clear business decisions. Over
+              the last 5+ years, I’ve enjoyed working across every stage of that journey—from building automated cloud
+              pipelines (BigQuery) and digging deep into <span class="text-google-yellow font-medium">exploratory
+                analytics &amp; BI dashboards</span> (Looker Studio), to training predictive <span
+                class="text-google-green font-medium">machine learning models</span> and deploying <span
+                class="text-google-blue font-medium">production GenAI / LLM microservices</span> that people can
+              actually rely on.
             </p>
 
             <!-- Interactive End-to-End Lifecycle Stages -->
             <div class="p-4 sm:p-5 rounded-2xl bg-google-surfaceAlt border border-google-borderSubtle space-y-2.5">
               <div class="flex items-center justify-between">
-                <span class="text-[11px] font-mono font-semibold uppercase tracking-wider text-google-textTertiary">Full-Stack Data Coverage</span>
+                <span
+                  class="text-[11px] font-mono font-semibold uppercase tracking-wider text-google-textTertiary">Full-Stack
+                  Data Coverage</span>
                 <span class="text-[11px] font-mono text-google-blue">Raw Ingestion ➔ Business Value</span>
               </div>
               <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-center text-xs font-mono">
@@ -226,42 +270,73 @@
 
             <!-- Quick Contacts Row (Google Chips) -->
             <div class="flex flex-wrap items-center gap-2 pt-1 font-mono text-xs">
-              <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-google-surfaceSubtle text-google-textSecondary border border-google-borderSubtle">
-                <svg class="w-3.5 h-3.5 text-google-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <div
+                class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-google-surfaceSubtle text-google-textSecondary border border-google-borderSubtle">
+                <svg class="w-3.5 h-3.5 text-google-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
                 <span>Buenos Aires, Argentina</span>
               </div>
 
-              <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-google-surfaceSubtle text-google-textSecondary border border-google-borderSubtle">
-                <svg class="w-3.5 h-3.5 text-google-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <div
+                class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-google-surfaceSubtle text-google-textSecondary border border-google-borderSubtle">
+                <svg class="w-3.5 h-3.5 text-google-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
                 <span>nico.care96@gmail.com</span>
               </div>
 
-              <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-google-surfaceSubtle text-google-textSecondary border border-google-borderSubtle">
-                <svg class="w-3.5 h-3.5 text-google-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              <div
+                class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-google-surfaceSubtle text-google-textSecondary border border-google-borderSubtle">
+                <svg class="w-3.5 h-3.5 text-google-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
                 <span>+54 11 5800-8500</span>
               </div>
             </div>
 
             <!-- Call to Actions -->
             <div class="flex flex-wrap items-center gap-3 pt-2">
-              <a href="#projects" class="px-6 py-3 rounded-full bg-google-blue hover:bg-google-blueHover font-medium text-sm text-white shadow-google-sm transition-all flex items-center gap-2 transform hover:-translate-y-0.5">
+              <a href="#projects"
+                class="px-6 py-3 rounded-full bg-google-blue hover:bg-google-blueHover font-medium text-sm text-white shadow-google-sm transition-all flex items-center gap-2 transform hover:-translate-y-0.5">
                 <span>View Projects</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
               </a>
 
-              <button onclick="copyToClipboard('nico.care96@gmail.com', 'Email copied!')" class="px-5 py-3 rounded-full bg-white hover:bg-google-surfaceSubtle border border-google-border text-sm font-medium text-google-textPrimary transition-all flex items-center gap-2">
-                <svg class="w-4 h-4 text-google-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+              <button onclick="copyToClipboard('nico.care96@gmail.com', 'Email copied!')"
+                class="px-5 py-3 rounded-full bg-white hover:bg-google-surfaceSubtle border border-google-border text-sm font-medium text-google-textPrimary transition-all flex items-center gap-2">
+                <svg class="w-4 h-4 text-google-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
                 <span>Copy Email</span>
               </button>
 
               <div class="flex items-center gap-2 pl-2">
                 <!-- GitHub -->
-                <a href="https://github.com/Nicocarello" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full border border-google-border hover:bg-google-surfaceSubtle text-google-textSecondary hover:text-google-textPrimary transition-all" title="Nicolas Carello GitHub">
-                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                <a href="https://github.com/Nicocarello" target="_blank" rel="noopener noreferrer"
+                  class="p-2.5 rounded-full border border-google-border hover:bg-google-surfaceSubtle text-google-textSecondary hover:text-google-textPrimary transition-all"
+                  title="Nicolas Carello GitHub">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                  </svg>
                 </a>
                 <!-- LinkedIn -->
-                <a href="https://www.linkedin.com/in/nicolas-carello/" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full border border-google-border hover:bg-google-surfaceSubtle text-google-textSecondary hover:text-google-blue transition-all" title="Nicolas Carello LinkedIn">
-                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                <a href="https://www.linkedin.com/in/nicolas-carello/" target="_blank" rel="noopener noreferrer"
+                  class="p-2.5 rounded-full border border-google-border hover:bg-google-surfaceSubtle text-google-textSecondary hover:text-google-blue transition-all"
+                  title="Nicolas Carello LinkedIn">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -270,29 +345,32 @@
           <!-- Right Column: Google Cloud Dashboard Overview Card -->
           <div class="lg:col-span-5">
             <div class="g-card p-6 sm:p-7 rounded-3xl shadow-google-sm">
-              
+
               <!-- Profile Header with Image -->
               <div class="flex items-center gap-4 pb-5 border-b border-google-borderSubtle">
                 <div class="relative shrink-0">
-                  <img 
-                    src="https://media.licdn.com/dms/image/v2/D4D03AQEBEoMRAHVF9Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1715729064200?e=1790812800&v=beta&t=DF2NRweeo-GBRT1hKZVGqSnnc8Azh20yVu1NbD6U5yY" 
-                    alt="Nicolas Carello Laje" 
+                  <img
+                    src="https://media.licdn.com/dms/image/v2/D4D03AQEBEoMRAHVF9Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1715729064200?e=1790812800&v=beta&t=DF2NRweeo-GBRT1hKZVGqSnnc8Azh20yVu1NbD6U5yY"
+                    alt="Nicolas Carello Laje"
                     class="w-16 h-16 sm:w-18 sm:h-18 rounded-2xl object-cover border-2 border-white shadow-google-sm"
-                    onerror="this.onerror=null; this.src='https://placehold.co/160x160/1a73e8/ffffff?text=NC';"
-                  />
-                  <span class="absolute -bottom-1 -right-1 w-4 h-4 bg-google-green border-2 border-white rounded-full" title="Open to roles"></span>
+                    onerror="this.onerror=null; this.src='https://placehold.co/160x160/1a73e8/ffffff?text=NC';" />
+                  <span class="absolute -bottom-1 -right-1 w-4 h-4 bg-google-green border-2 border-white rounded-full"
+                    title="Open to roles"></span>
                 </div>
                 <div class="min-w-0 flex-1">
                   <div class="flex items-center justify-between gap-2">
                     <h3 class="text-base font-bold text-google-textPrimary truncate">Nicolas Carello Laje</h3>
-                    <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-mono font-medium bg-google-greenLight text-google-green shrink-0">
+                    <span
+                      class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-mono font-medium bg-google-greenLight text-google-green shrink-0">
                       <span class="w-1.5 h-1.5 rounded-full bg-google-green animate-pulse"></span>
                       Available
                     </span>
                   </div>
-                  <p class="text-xs text-google-textSecondary mt-0.5 font-medium">Data Scientist &amp; AI/ML Engineer</p>
+                  <p class="text-xs text-google-textSecondary mt-0.5 font-medium">Data Scientist &amp; AI/ML Engineer
+                  </p>
                   <div class="flex items-center gap-2 mt-1.5 text-[11px] font-mono text-google-textTertiary">
-                    <span class="px-2 py-0.5 rounded-md bg-google-surfaceSubtle text-google-blue font-semibold">GCP</span>
+                    <span
+                      class="px-2 py-0.5 rounded-md bg-google-surfaceSubtle text-google-blue font-semibold">GCP</span>
                     <span>•</span>
                     <span>Vertex AI</span>
                     <span>•</span>
@@ -303,7 +381,7 @@
 
               <!-- Metrics Grid -->
               <div class="grid grid-cols-2 gap-3.5 pt-5">
-                
+
                 <div class="p-4 rounded-2xl bg-google-surfaceAlt border border-google-borderSubtle">
                   <div class="text-2xl font-bold text-google-textPrimary font-mono">5+</div>
                   <div class="text-xs font-medium text-google-textSecondary mt-0.5">Years in Production</div>
@@ -332,12 +410,20 @@
 
               <!-- Quick tags -->
               <div class="mt-5 pt-4 border-t border-google-borderSubtle flex flex-wrap gap-1.5">
-                <span class="px-2.5 py-1 text-xs rounded-full bg-google-surfaceSubtle text-google-textSecondary font-mono">ETL / ELT</span>
-                <span class="px-2.5 py-1 text-xs rounded-full bg-google-surfaceSubtle text-google-textSecondary font-mono">Vertex AI</span>
-                <span class="px-2.5 py-1 text-xs rounded-full bg-google-surfaceSubtle text-google-textSecondary font-mono">XGBoost</span>
-                <span class="px-2.5 py-1 text-xs rounded-full bg-google-surfaceSubtle text-google-textSecondary font-mono">FastAPI</span>
-                <span class="px-2.5 py-1 text-xs rounded-full bg-google-surfaceSubtle text-google-textSecondary font-mono">Docker</span>
-                <span class="px-2.5 py-1 text-xs rounded-full bg-google-surfaceSubtle text-google-textSecondary font-mono">Looker</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-google-surfaceSubtle text-google-textSecondary font-mono">ETL
+                  / ELT</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-google-surfaceSubtle text-google-textSecondary font-mono">Vertex
+                  AI</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-google-surfaceSubtle text-google-textSecondary font-mono">XGBoost</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-google-surfaceSubtle text-google-textSecondary font-mono">FastAPI</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-google-surfaceSubtle text-google-textSecondary font-mono">Docker</span>
+                <span
+                  class="px-2.5 py-1 text-xs rounded-full bg-google-surfaceSubtle text-google-textSecondary font-mono">Looker</span>
               </div>
 
             </div>
@@ -349,16 +435,18 @@
 
     <section id="skills" class="py-20 bg-google-surfaceAlt">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div class="text-center max-w-2xl mx-auto mb-14">
-          <span class="text-xs font-medium uppercase tracking-wider text-google-blue bg-google-blueLight px-3.5 py-1 rounded-full border border-google-blueBorder">
+          <span
+            class="text-xs font-medium uppercase tracking-wider text-google-blue bg-google-blueLight px-3.5 py-1 rounded-full border border-google-blueBorder">
             Technical Stack
           </span>
           <h2 class="text-3xl font-extrabold text-google-textPrimary mt-3 tracking-tight">
             Core Competencies & Tooling
           </h2>
           <p class="text-sm text-google-textSecondary mt-2">
-            Structured skillsets honed across 5+ years of shipping enterprise machine learning, cloud pipelines, and microservices.
+            Structured skillsets honed across 5+ years of shipping enterprise machine learning, cloud pipelines, and
+            microservices.
           </p>
         </div>
 
@@ -367,95 +455,169 @@
           <!-- Category 1: GenAI & NLP -->
           <div class="g-card p-6 rounded-3xl flex flex-col justify-between">
             <div>
-              <div class="w-10 h-10 rounded-2xl bg-google-blueLight text-google-blue flex items-center justify-center mb-4">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              <div
+                class="w-10 h-10 rounded-2xl bg-google-blueLight text-google-blue flex items-center justify-center mb-4">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
               </div>
               <h3 class="text-base font-bold text-google-textPrimary mb-1">Generative AI & NLP</h3>
-              <p class="text-xs text-google-textSecondary mb-4 leading-relaxed">Prompt engineering, embedding vectorization, semantic analysis, and orchestrating Vertex AI & OpenAI models.</p>
+              <p class="text-xs text-google-textSecondary mb-4 leading-relaxed">Prompt engineering, embedding
+                vectorization, semantic analysis, and orchestrating Vertex AI & OpenAI models.</p>
             </div>
             <div class="flex flex-wrap gap-1.5 pt-2">
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-blueLight text-google-blue font-medium">Vertex AI</span>
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-blueLight text-google-blue font-medium">OpenAI APIs</span>
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">LLM Orchestration</span>
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Embeddings</span>
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Prompt Engineering</span>
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">NLTK / Sentiment</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-blueLight text-google-blue font-medium">Vertex
+                AI</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-blueLight text-google-blue font-medium">OpenAI
+                APIs</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">LLM
+                Orchestration</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Embeddings</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Prompt
+                Engineering</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">NLTK
+                / Sentiment</span>
             </div>
           </div>
 
           <!-- Category 2: Machine Learning & Modeling -->
           <div class="g-card p-6 rounded-3xl flex flex-col justify-between">
             <div>
-              <div class="w-10 h-10 rounded-2xl bg-google-greenLight text-google-green flex items-center justify-center mb-4">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+              <div
+                class="w-10 h-10 rounded-2xl bg-google-greenLight text-google-green flex items-center justify-center mb-4">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
               </div>
               <h3 class="text-base font-bold text-google-textPrimary mb-1">Machine Learning & Stats</h3>
-              <p class="text-xs text-google-textSecondary mb-4 leading-relaxed">Supervised & unsupervised algorithms, rigorous cross-validation, feature extraction, and performance tuning.</p>
+              <p class="text-xs text-google-textSecondary mb-4 leading-relaxed">Supervised & unsupervised algorithms,
+                rigorous cross-validation, feature extraction, and performance tuning.</p>
             </div>
             <div class="flex flex-wrap gap-1.5 pt-2">
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-greenLight text-google-green font-medium">XGBoost</span>
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-greenLight text-google-green font-medium">Scikit-learn</span>
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Feature Engineering</span>
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Clustering</span>
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">ROC-AUC / F1-Score</span>
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Cross-Validation</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-greenLight text-google-green font-medium">XGBoost</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-greenLight text-google-green font-medium">Scikit-learn</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Feature
+                Engineering</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Clustering</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">ROC-AUC
+                / F1-Score</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Cross-Validation</span>
             </div>
           </div>
 
           <!-- Category 3: Cloud & Data Engineering -->
           <div class="g-card p-6 rounded-3xl flex flex-col justify-between">
             <div>
-              <div class="w-10 h-10 rounded-2xl bg-google-blueLight text-google-blue flex items-center justify-center mb-4">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+              <div
+                class="w-10 h-10 rounded-2xl bg-google-blueLight text-google-blue flex items-center justify-center mb-4">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                </svg>
               </div>
               <h3 class="text-base font-bold text-google-textPrimary mb-1">Cloud & Data Engineering</h3>
-              <p class="text-xs text-google-textSecondary mb-4 leading-relaxed">Multi-source automated ETL/ELT pipelines, warehousing architecture, and distributed relational databases.</p>
+              <p class="text-xs text-google-textSecondary mb-4 leading-relaxed">Multi-source automated ETL/ELT
+                pipelines, warehousing architecture, and distributed relational databases.</p>
             </div>
             <div class="flex flex-wrap gap-1.5 pt-2">
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-blueLight text-google-blue font-medium">GCP</span>
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-blueLight text-google-blue font-medium">BigQuery</span>
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">ETL / ELT Pipelines</span>
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">PostgreSQL</span>
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">CockroachDB</span>
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">REST APIs</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-blueLight text-google-blue font-medium">GCP</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-blueLight text-google-blue font-medium">BigQuery</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">ETL
+                / ELT Pipelines</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">PostgreSQL</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">CockroachDB</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">REST
+                APIs</span>
             </div>
           </div>
 
           <!-- Category 4: Software Eng & MLOps -->
           <div class="g-card p-6 rounded-3xl flex flex-col justify-between">
             <div>
-              <div class="w-10 h-10 rounded-2xl bg-google-redLight text-google-red flex items-center justify-center mb-4">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+              <div
+                class="w-10 h-10 rounded-2xl bg-google-redLight text-google-red flex items-center justify-center mb-4">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
               </div>
               <h3 class="text-base font-bold text-google-textPrimary mb-1">Software Eng & MLOps</h3>
-              <p class="text-xs text-google-textSecondary mb-4 leading-relaxed">Enterprise Python microservices, containerization, event streaming with Kafka, and automated CI/CD.</p>
+              <p class="text-xs text-google-textSecondary mb-4 leading-relaxed">Enterprise Python microservices,
+                containerization, event streaming with Kafka, and automated CI/CD.</p>
             </div>
             <div class="flex flex-wrap gap-1.5 pt-2">
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-redLight text-google-red font-medium">Docker</span>
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-redLight text-google-red font-medium">FastAPI / Flask</span>
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Kafka & DDD</span>
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Django</span>
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">GitHub Actions</span>
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">TDD (Test-Driven)</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-redLight text-google-red font-medium">Docker</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-redLight text-google-red font-medium">FastAPI
+                / Flask</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Kafka
+                & DDD</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Django</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">GitHub
+                Actions</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">TDD
+                (Test-Driven)</span>
             </div>
           </div>
 
           <!-- Category 5: Business Intelligence & KPI Strategy -->
           <div class="g-card p-6 rounded-3xl flex flex-col justify-between">
             <div>
-              <div class="w-10 h-10 rounded-2xl bg-google-yellowLight text-google-yellow flex items-center justify-center mb-4">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/></svg>
+              <div
+                class="w-10 h-10 rounded-2xl bg-google-yellowLight text-google-yellow flex items-center justify-center mb-4">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+                </svg>
               </div>
               <h3 class="text-base font-bold text-google-textPrimary mb-1">BI & Analytics Strategy</h3>
-              <p class="text-xs text-google-textSecondary mb-4 leading-relaxed">Executive KPI strategy, unified data dictionary governance, and interactive decision dashboards.</p>
+              <p class="text-xs text-google-textSecondary mb-4 leading-relaxed">Executive KPI strategy, unified data
+                dictionary governance, and interactive decision dashboards.</p>
             </div>
             <div class="flex flex-wrap gap-1.5 pt-2">
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-yellowLight text-google-yellow font-medium">Looker Studio</span>
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-yellowLight text-google-yellow font-medium">Power BI</span>
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">KPI Modeling</span>
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Data Governance</span>
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Advanced SQL</span>
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Executive Dashboards</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-yellowLight text-google-yellow font-medium">Looker
+                Studio</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-yellowLight text-google-yellow font-medium">Power
+                BI</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">KPI
+                Modeling</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Data
+                Governance</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Advanced
+                SQL</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Executive
+                Dashboards</span>
             </div>
           </div>
 
@@ -463,18 +625,30 @@
           <div class="g-card p-6 rounded-3xl flex flex-col justify-between">
             <div>
               <div class="w-10 h-10 rounded-2xl bg-blue-50 text-google-blue flex items-center justify-center mb-4">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                </svg>
               </div>
               <h3 class="text-base font-bold text-google-textPrimary mb-1">Languages & Developer Tools</h3>
-              <p class="text-xs text-google-textSecondary mb-4 leading-relaxed">Data storytelling and narrative synthesis combined with modern collaborative development environments.</p>
+              <p class="text-xs text-google-textSecondary mb-4 leading-relaxed">Data storytelling and narrative
+                synthesis combined with modern collaborative development environments.</p>
             </div>
             <div class="flex flex-wrap gap-1.5 pt-2">
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-blue-50 text-google-blue font-medium">Spanish (Native)</span>
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-blue-50 text-google-blue font-medium">English (C1 Advanced)</span>
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Git / GitHub</span>
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">VS Code</span>
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Jira</span>
-              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">DBeaver</span>
+              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-blue-50 text-google-blue font-medium">Spanish
+                (Native)</span>
+              <span class="px-2.5 py-1 text-xs font-mono rounded-full bg-blue-50 text-google-blue font-medium">English
+                (C1 Advanced)</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Git
+                / GitHub</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">VS
+                Code</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Jira</span>
+              <span
+                class="px-2.5 py-1 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">DBeaver</span>
             </div>
           </div>
 
@@ -484,9 +658,10 @@
 
     <section id="experience" class="py-20 bg-white border-b border-google-borderSubtle">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div class="text-center max-w-xl mx-auto mb-14">
-          <span class="text-xs font-medium uppercase tracking-wider text-google-green bg-google-greenLight px-3.5 py-1 rounded-full border border-green-200">
+          <span
+            class="text-xs font-medium uppercase tracking-wider text-google-green bg-google-greenLight px-3.5 py-1 rounded-full border border-green-200">
             Career Journey
           </span>
           <h2 class="text-3xl font-extrabold text-google-textPrimary mt-3 tracking-tight">
@@ -507,65 +682,82 @@
                 <span class="text-xs font-mono text-google-blue font-semibold">04/2023 – 05/2026</span>
                 <h3 class="text-xl font-bold text-google-textPrimary mt-0.5">Data & AI Lead / Data Scientist</h3>
                 <div class="text-xs text-google-textSecondary mt-1 flex items-center gap-1.5">
-                  <svg class="w-3.5 h-3.5 text-google-textTertiary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                  <svg class="w-3.5 h-3.5 text-google-textTertiary" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
                   <span>Buenos Aires, Argentina</span>
                 </div>
               </div>
 
               <!-- Clickable Publica Lab Badge with Logo -->
-              <a 
-                href="https://publicalab.com/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a href="https://publicalab.com/" target="_blank" rel="noopener noreferrer"
                 title="Visit Publica Lab website"
                 class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-slate-900 text-white hover:bg-slate-800 transition-all shadow-sm group/link transform hover:-translate-y-0.5">
-                <img 
-                  src="https://publicalab.com/assets/imgs/logo-publica-blanco.svg" 
-                  alt="Publica Lab Logo" 
-                  class="h-3.5 w-auto object-contain max-w-[70px]" 
-                  onerror="this.style.display='none'"
-                />
+                <img src="https://publicalab.com/assets/imgs/logo-publica-blanco.svg" alt="Publica Lab Logo"
+                  class="h-3.5 w-auto object-contain max-w-[70px]" onerror="this.style.display='none'" />
                 <span class="text-xs font-medium">Publica Lab</span>
-                <svg class="w-3 h-3 text-slate-400 group-hover/link:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                <svg class="w-3 h-3 text-slate-400 group-hover/link:text-white transition-colors" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
               </a>
             </div>
 
             <p class="text-xs sm:text-sm text-google-textSecondary leading-relaxed mb-4">
-              Led the Data & AI department defining KPIs, reporting strategy, and analytics roadmap. Automated Python-based ETL pipelines to centralize multi-source data, built executive dashboards in Looker Studio, and developed an LLM text analyzer.
+              Led the Data & AI department defining KPIs, reporting strategy, and analytics roadmap. Automated
+              Python-based ETL pipelines to centralize multi-source data, built executive dashboards in Looker Studio,
+              and developed an LLM text analyzer.
             </p>
 
             <ul class="space-y-2 text-xs sm:text-sm text-google-textSecondary">
               <li class="flex items-start gap-2.5">
                 <span class="text-google-blue font-bold shrink-0 mt-0.5">▹</span>
-                <span>Spearheaded the organization's data roadmap and built the Data & AI department from scratch, establishing modeling standards, data governance, and analytics architecture.</span>
+                <span>Spearheaded the organization's data roadmap and built the Data & AI department from scratch,
+                  establishing modeling standards, data governance, and analytics architecture.</span>
               </li>
               <li class="flex items-start gap-2.5">
                 <span class="text-google-green font-bold shrink-0 mt-0.5">▹</span>
-                <span>Engineered an end-to-end NLP and sentiment analysis pipeline utilizing Vertex AI / OpenAI LLMs across enterprise accounts, enhancing data-driven decision making.</span>
+                <span>Engineered an end-to-end NLP and sentiment analysis pipeline utilizing Vertex AI / OpenAI LLMs
+                  across enterprise accounts, enhancing data-driven decision making.</span>
               </li>
               <li class="flex items-start gap-2.5">
                 <span class="text-google-blue font-bold shrink-0 mt-0.5">▹</span>
-                <span>Developed and deployed predictive and customer segmentation models to uncover behavioral patterns and boost user engagement.</span>
+                <span>Developed and deployed predictive and customer segmentation models to uncover behavioral patterns
+                  and boost user engagement.</span>
               </li>
               <li class="flex items-start gap-2.5">
                 <span class="text-google-green font-bold shrink-0 mt-0.5">▹</span>
-                <span>Automated multi-source ETL/ELT data pipelines in Python and BigQuery/SQL, consolidating disparate client sources into unified data warehouses.</span>
+                <span>Automated multi-source ETL/ELT data pipelines in Python and BigQuery/SQL, consolidating disparate
+                  client sources into unified data warehouses.</span>
               </li>
               <li class="flex items-start gap-2.5">
                 <span class="text-google-blue font-bold shrink-0 mt-0.5">▹</span>
-                <span>Delivered standardized interactive Looker Studio dashboards for C-suite and enterprise stakeholder accounts.</span>
+                <span>Delivered standardized interactive Looker Studio dashboards for C-suite and enterprise stakeholder
+                  accounts.</span>
               </li>
             </ul>
 
             <div class="flex flex-wrap gap-1.5 mt-5 pt-4 border-t border-google-borderSubtle">
-              <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Vertex AI</span>
-              <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">OpenAI</span>
-              <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Python</span>
-              <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">BigQuery</span>
-              <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Looker Studio</span>
-              <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">ETL Pipelines</span>
+              <span
+                class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Vertex
+                AI</span>
+              <span
+                class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">OpenAI</span>
+              <span
+                class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Python</span>
+              <span
+                class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">BigQuery</span>
+              <span
+                class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Looker
+                Studio</span>
+              <span
+                class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">ETL
+                Pipelines</span>
             </div>
           </div>
 
@@ -576,43 +768,47 @@
                 <span class="text-xs font-mono text-google-green font-semibold">04/2019 – 06/2023</span>
                 <h3 class="text-xl font-bold text-google-textPrimary mt-0.5">Python Developer</h3>
                 <div class="text-xs text-google-textSecondary mt-1 flex items-center gap-1.5">
-                  <svg class="w-3.5 h-3.5 text-google-textTertiary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                  <svg class="w-3.5 h-3.5 text-google-textTertiary" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
                   <span>Buenos Aires, Argentina</span>
                 </div>
               </div>
 
               <!-- Clickable Globant Badge with Logo -->
-              <a 
-                href="https://www.globant.com/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                title="Visit Globant website"
+              <a href="https://www.globant.com/" target="_blank" rel="noopener noreferrer" title="Visit Globant website"
                 class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-google-border hover:bg-google-surfaceSubtle transition-all shadow-sm group/link transform hover:-translate-y-0.5">
-                <img 
-                  src="https://cdn.freelogovectors.net/wp-content/uploads/2020/08/globant-logo.png" 
-                  alt="Globant Logo" 
-                  class="h-3.5 w-auto object-contain" 
-                  onerror="this.style.display='none'"
-                />
+                <img src="https://cdn.freelogovectors.net/wp-content/uploads/2020/08/globant-logo.png"
+                  alt="Globant Logo" class="h-3.5 w-auto object-contain" onerror="this.style.display='none'" />
                 <span class="text-xs font-medium text-google-textPrimary">Globant</span>
-                <svg class="w-3 h-3 text-google-textTertiary group-hover/link:text-google-textPrimary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                <svg class="w-3 h-3 text-google-textTertiary group-hover/link:text-google-textPrimary transition-colors"
+                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
               </a>
             </div>
 
             <p class="text-xs sm:text-sm text-google-textSecondary leading-relaxed mb-4">
-              Developed web services in Python using Flask/Django to automate data center network infrastructure. Implemented event-driven architectures with Kafka, contributed to the migration of an expert system into a modern microservices platform, and applied TDD practices to ensure software quality.
+              Developed web services in Python using Flask/Django to automate data center network infrastructure.
+              Implemented event-driven architectures with Kafka, contributed to the migration of an expert system into a
+              modern microservices platform, and applied TDD practices to ensure software quality.
             </p>
 
             <ul class="space-y-2 text-xs sm:text-sm text-google-textSecondary">
               <li class="flex items-start gap-2.5">
                 <span class="text-google-green font-bold shrink-0 mt-0.5">▹</span>
-                <span>Developed robust Python web services with Flask and Django for automated infrastructure operations.</span>
+                <span>Developed robust Python web services with Flask and Django for automated infrastructure
+                  operations.</span>
               </li>
               <li class="flex items-start gap-2.5">
                 <span class="text-google-blue font-bold shrink-0 mt-0.5">▹</span>
-                <span>Implemented event-driven architectures using Kafka and Domain-Driven Design (DDD) principles.</span>
+                <span>Implemented event-driven architectures using Kafka and Domain-Driven Design (DDD)
+                  principles.</span>
               </li>
               <li class="flex items-start gap-2.5">
                 <span class="text-google-green font-bold shrink-0 mt-0.5">▹</span>
@@ -620,21 +816,30 @@
               </li>
               <li class="flex items-start gap-2.5">
                 <span class="text-google-blue font-bold shrink-0 mt-0.5">▹</span>
-                <span>Managed relational databases (PostgreSQL, Oracle PL/SQL) and enforced strict Test-Driven Development (TDD) methodologies.</span>
+                <span>Managed relational databases (PostgreSQL, Oracle PL/SQL) and enforced strict Test-Driven
+                  Development (TDD) methodologies.</span>
               </li>
               <li class="flex items-start gap-2.5">
                 <span class="text-google-green font-bold shrink-0 mt-0.5">▹</span>
-                <span>Deployed services with Docker and Kubernetes, collaborating across distributed teams via Git and Jira.</span>
+                <span>Deployed services with Docker and Kubernetes, collaborating across distributed teams via Git and
+                  Jira.</span>
               </li>
             </ul>
 
             <div class="flex flex-wrap gap-1.5 mt-5 pt-4 border-t border-google-borderSubtle">
-              <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Python</span>
-              <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Kafka</span>
-              <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Flask / Django</span>
-              <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Docker</span>
-              <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">PostgreSQL</span>
-              <span class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">TDD</span>
+              <span
+                class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Python</span>
+              <span
+                class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Kafka</span>
+              <span
+                class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Flask
+                / Django</span>
+              <span
+                class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">Docker</span>
+              <span
+                class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">PostgreSQL</span>
+              <span
+                class="px-2.5 py-0.5 text-xs font-mono rounded-full bg-google-surfaceSubtle text-google-textSecondary">TDD</span>
             </div>
           </div>
 
@@ -644,11 +849,12 @@
 
     <section id="projects" class="py-20 bg-google-surfaceAlt border-b border-google-borderSubtle">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <!-- Section Header -->
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
           <div>
-            <span class="text-xs font-medium uppercase tracking-wider text-google-blue bg-google-blueLight px-3.5 py-1 rounded-full border border-google-blueBorder">
+            <span
+              class="text-xs font-medium uppercase tracking-wider text-google-blue bg-google-blueLight px-3.5 py-1 rounded-full border border-google-blueBorder">
               Featured Deliverables
             </span>
             <h2 class="text-3xl font-extrabold text-google-textPrimary mt-3 tracking-tight">
@@ -660,12 +866,23 @@
           </div>
 
           <!-- Google Search Pill Filter Bar -->
-          <div class="mt-6 md:mt-0 flex flex-wrap items-center gap-2 p-1 rounded-full bg-white border border-google-border">
-            <button onclick="filterProjects('all')" class="project-filter active px-4 py-1.5 rounded-full text-xs font-medium transition-all bg-google-blue text-white shadow-sm" data-filter="all">All</button>
-            <button onclick="filterProjects('genai')" class="project-filter px-4 py-1.5 rounded-full text-xs font-medium transition-all text-google-textSecondary hover:text-google-textPrimary" data-filter="genai">AI & LLMs</button>
-            <button onclick="filterProjects('ml')" class="project-filter px-4 py-1.5 rounded-full text-xs font-medium transition-all text-google-textSecondary hover:text-google-textPrimary" data-filter="ml">Machine Learning</button>
-            <button onclick="filterProjects('engineering')" class="project-filter px-4 py-1.5 rounded-full text-xs font-medium transition-all text-google-textSecondary hover:text-google-textPrimary" data-filter="engineering">Data Pipelines</button>
-            <button onclick="filterProjects('bi')" class="project-filter px-4 py-1.5 rounded-full text-xs font-medium transition-all text-google-textSecondary hover:text-google-textPrimary" data-filter="bi">BI Dashboards</button>
+          <div
+            class="mt-6 md:mt-0 flex flex-wrap items-center gap-2 p-1 rounded-full bg-white border border-google-border">
+            <button onclick="filterProjects('all')"
+              class="project-filter active px-4 py-1.5 rounded-full text-xs font-medium transition-all bg-google-blue text-white shadow-sm"
+              data-filter="all">All</button>
+            <button onclick="filterProjects('genai')"
+              class="project-filter px-4 py-1.5 rounded-full text-xs font-medium transition-all text-google-textSecondary hover:text-google-textPrimary"
+              data-filter="genai">AI & LLMs</button>
+            <button onclick="filterProjects('ml')"
+              class="project-filter px-4 py-1.5 rounded-full text-xs font-medium transition-all text-google-textSecondary hover:text-google-textPrimary"
+              data-filter="ml">Machine Learning</button>
+            <button onclick="filterProjects('engineering')"
+              class="project-filter px-4 py-1.5 rounded-full text-xs font-medium transition-all text-google-textSecondary hover:text-google-textPrimary"
+              data-filter="engineering">Data Pipelines</button>
+            <button onclick="filterProjects('bi')"
+              class="project-filter px-4 py-1.5 rounded-full text-xs font-medium transition-all text-google-textSecondary hover:text-google-textPrimary"
+              data-filter="bi">BI Dashboards</button>
           </div>
         </div>
 
@@ -673,17 +890,22 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-container">
 
           <!-- PLACEHOLDER / ADD PROJECT NOTICE -->
-          <div class="col-span-full g-card p-10 sm:p-14 rounded-3xl text-center border-dashed border-2 border-google-borderSubtle bg-white flex flex-col items-center justify-center">
-            <div class="w-14 h-14 rounded-2xl bg-google-blueLight text-google-blue flex items-center justify-center mb-4">
+          <div
+            class="col-span-full g-card p-10 sm:p-14 rounded-3xl text-center border-dashed border-2 border-google-borderSubtle bg-white flex flex-col items-center justify-center">
+            <div
+              class="w-14 h-14 rounded-2xl bg-google-blueLight text-google-blue flex items-center justify-center mb-4">
               <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
               </svg>
             </div>
             <h3 class="text-lg font-bold text-google-textPrimary mb-1.5">Projects Section Ready</h3>
             <p class="text-xs sm:text-sm text-google-textSecondary max-w-md mx-auto mb-5 leading-relaxed">
-              This space is prepared for your projects. You can share your project names, descriptions, GitHub or live demo links, and categories whenever you'd like!
+              This space is prepared for your projects. You can share your project names, descriptions, GitHub or live
+              demo links, and categories whenever you'd like!
             </p>
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-google-border text-xs font-mono text-google-textSecondary">
+            <div
+              class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-google-border text-xs font-mono text-google-textSecondary">
               <span class="w-2 h-2 rounded-full bg-google-blue animate-pulse"></span>
               Awaiting your custom projects & links
             </div>
@@ -746,9 +968,10 @@
 
     <section id="education" class="py-20 bg-white border-b border-google-borderSubtle">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div class="text-center max-w-xl mx-auto mb-14">
-          <span class="text-xs font-medium uppercase tracking-wider text-google-blue bg-google-blueLight px-3.5 py-1 rounded-full border border-google-blueBorder">
+          <span
+            class="text-xs font-medium uppercase tracking-wider text-google-blue bg-google-blueLight px-3.5 py-1 rounded-full border border-google-blueBorder">
             Academics
           </span>
           <h2 class="text-3xl font-extrabold text-google-textPrimary mt-3 tracking-tight">
@@ -760,21 +983,25 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          
+
           <!-- Education 1: UNSAM Data Science -->
           <div class="g-card p-6 sm:p-7 rounded-3xl flex flex-col justify-between">
             <div>
               <div class="flex items-center justify-between mb-3">
-                <span class="px-3 py-1 rounded-full text-xs font-mono bg-google-blueLight text-google-blue font-medium">2022 – Present</span>
+                <span
+                  class="px-3 py-1 rounded-full text-xs font-mono bg-google-blueLight text-google-blue font-medium">2022
+                  – Present</span>
                 <span class="text-xs font-medium text-google-green">In Progress</span>
               </div>
               <h3 class="text-lg font-bold text-google-textPrimary mb-1">Bachelor Degree in Data Science</h3>
               <p class="text-xs font-medium text-google-blue">Universidad Nacional de San Martín (UNSAM)</p>
               <p class="text-xs text-google-textSecondary mt-3 leading-relaxed">
-                Advanced studies in statistical inference, machine learning algorithms, calculus, linear algebra, discrete optimization, database architecture, and big data ecosystems.
+                Advanced studies in statistical inference, machine learning algorithms, calculus, linear algebra,
+                discrete optimization, database architecture, and big data ecosystems.
               </p>
             </div>
-            <div class="mt-5 pt-3 border-t border-google-borderSubtle flex items-center justify-between text-xs font-mono text-google-textTertiary">
+            <div
+              class="mt-5 pt-3 border-t border-google-borderSubtle flex items-center justify-between text-xs font-mono text-google-textTertiary">
               <span>UNSAM • Argentina</span>
               <span>Licenciatura en Cs. de Datos</span>
             </div>
@@ -784,16 +1011,20 @@
           <div class="g-card p-6 sm:p-7 rounded-3xl flex flex-col justify-between">
             <div>
               <div class="flex items-center justify-between mb-3">
-                <span class="px-3 py-1 rounded-full text-xs font-mono bg-google-surfaceSubtle text-google-textSecondary font-medium">2019 – 2022</span>
+                <span
+                  class="px-3 py-1 rounded-full text-xs font-mono bg-google-surfaceSubtle text-google-textSecondary font-medium">2019
+                  – 2022</span>
                 <span class="text-xs font-medium text-google-blue">Completed</span>
               </div>
               <h3 class="text-lg font-bold text-google-textPrimary mb-1">Associate Degree in Programming</h3>
               <p class="text-xs font-medium text-google-blue">Universidad Nacional de San Martín (UNSAM)</p>
               <p class="text-xs text-google-textSecondary mt-3 leading-relaxed">
-                Strong engineering foundation in algorithms, data structures, object-oriented design, relational database modeling, software architecture, and system design.
+                Strong engineering foundation in algorithms, data structures, object-oriented design, relational
+                database modeling, software architecture, and system design.
               </p>
             </div>
-            <div class="mt-5 pt-3 border-t border-google-borderSubtle flex items-center justify-between text-xs font-mono text-google-textTertiary">
+            <div
+              class="mt-5 pt-3 border-t border-google-borderSubtle flex items-center justify-between text-xs font-mono text-google-textTertiary">
               <span>UNSAM • Argentina</span>
               <span>Tecnicatura en Programación</span>
             </div>
@@ -803,16 +1034,20 @@
           <div class="g-card p-6 sm:p-7 rounded-3xl flex flex-col justify-between">
             <div>
               <div class="flex items-center justify-between mb-3">
-                <span class="px-3 py-1 rounded-full text-xs font-mono bg-google-greenLight text-google-green font-medium">2021</span>
+                <span
+                  class="px-3 py-1 rounded-full text-xs font-mono bg-google-greenLight text-google-green font-medium">2021</span>
                 <span class="text-xs font-medium text-google-green">Completed</span>
               </div>
               <h3 class="text-lg font-bold text-google-textPrimary mb-1">Diploma in Data Science</h3>
               <p class="text-xs font-medium text-google-green">Acámica</p>
               <p class="text-xs text-google-textSecondary mt-3 leading-relaxed">
-                Intensive professional training focusing on exploratory data analysis (EDA), applied machine learning workflows, predictive modeling, statistical testing, and practical Python data stack execution (Pandas, NumPy, Scikit-learn).
+                Intensive professional training focusing on exploratory data analysis (EDA), applied machine learning
+                workflows, predictive modeling, statistical testing, and practical Python data stack execution (Pandas,
+                NumPy, Scikit-learn).
               </p>
             </div>
-            <div class="mt-5 pt-3 border-t border-google-borderSubtle flex items-center justify-between text-xs font-mono text-google-textTertiary">
+            <div
+              class="mt-5 pt-3 border-t border-google-borderSubtle flex items-center justify-between text-xs font-mono text-google-textTertiary">
               <span>Acámica • Argentina</span>
               <span>Certificación Profesional</span>
             </div>
@@ -822,28 +1057,31 @@
           <div class="g-card p-6 sm:p-7 rounded-3xl flex flex-col justify-between">
             <div>
               <div class="flex items-center justify-between mb-3">
-                <span class="px-3 py-1 rounded-full text-xs font-mono bg-google-yellowLight text-google-yellow font-medium">2015 – 2017</span>
+                <span
+                  class="px-3 py-1 rounded-full text-xs font-mono bg-google-yellowLight text-google-yellow font-medium">2015
+                  – 2017</span>
                 <span class="text-xs font-medium text-google-blue">Completed</span>
               </div>
               <h3 class="text-lg font-bold text-google-textPrimary mb-1">Bachelor Degree in Journalism</h3>
               <div class="mt-0.5">
-                <a 
-                  href="https://www.teaydeportea.edu.ar/" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a href="https://www.teaydeportea.edu.ar/" target="_blank" rel="noopener noreferrer"
                   title="Visit Tea & DeporTea website"
                   class="inline-flex items-center gap-1.5 text-xs font-medium text-google-blue hover:text-google-blueHover group/link">
                   <span>Tea & DeporTea</span>
-                  <svg class="w-3 h-3 text-google-blue/80 group-hover/link:text-google-blue transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                  <svg class="w-3 h-3 text-google-blue/80 group-hover/link:text-google-blue transition-colors"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
                 </a>
               </div>
               <p class="text-xs text-google-textSecondary mt-3 leading-relaxed">
-                Formative training in qualitative research, critical source analysis, narrative structure, data storytelling, and synthesis of complex information into high-clarity communications.
+                Formative training in qualitative research, critical source analysis, narrative structure, data
+                storytelling, and synthesis of complex information into high-clarity communications.
               </p>
             </div>
-            <div class="mt-5 pt-3 border-t border-google-borderSubtle flex items-center justify-between text-xs font-mono text-google-textTertiary">
+            <div
+              class="mt-5 pt-3 border-t border-google-borderSubtle flex items-center justify-between text-xs font-mono text-google-textTertiary">
               <span>Tea & DeporTea • Buenos Aires</span>
               <span>Periodismo General</span>
             </div>
@@ -855,53 +1093,77 @@
 
     <section id="contact" class="py-20 bg-google-surfaceAlt">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div class="g-card rounded-3xl p-8 sm:p-12 shadow-google-sm">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
-            
+
             <div class="lg:col-span-5 space-y-6">
               <div>
-                <span class="text-xs font-medium uppercase tracking-wider text-google-blue bg-google-blueLight px-3.5 py-1 rounded-full border border-google-blueBorder">
+                <span
+                  class="text-xs font-medium uppercase tracking-wider text-google-blue bg-google-blueLight px-3.5 py-1 rounded-full border border-google-blueBorder">
                   Connect
                 </span>
-                <h2 class="text-3xl font-extrabold text-google-textPrimary mt-3 tracking-tight">Let's discuss data & AI systems.</h2>
+                <h2 class="text-3xl font-extrabold text-google-textPrimary mt-3 tracking-tight">Let's discuss data & AI
+                  systems.</h2>
                 <p class="text-sm text-google-textSecondary mt-2 leading-relaxed">
-                  Looking for a Data Scientist, AI/ML Engineer, or Senior Python Developer to drive analytics architecture or model deployment? Feel free to reach out directly.
+                  Looking for a Data Scientist, AI/ML Engineer, or Senior Python Developer to drive analytics
+                  architecture or model deployment? Feel free to reach out directly.
                 </p>
               </div>
 
               <!-- Quick contact chips -->
               <div class="space-y-3 font-mono text-xs">
-                
-                <button onclick="copyToClipboard('nico.care96@gmail.com', 'Email copied!')" class="w-full p-3.5 rounded-2xl bg-google-surfaceAlt border border-google-borderSubtle hover:border-google-blue flex items-center justify-between group transition-all text-left">
+
+                <button onclick="copyToClipboard('nico.care96@gmail.com', 'Email copied!')"
+                  class="w-full p-3.5 rounded-2xl bg-google-surfaceAlt border border-google-borderSubtle hover:border-google-blue flex items-center justify-between group transition-all text-left">
                   <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-full bg-google-blueLight text-google-blue flex items-center justify-center">
-                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    <div
+                      class="w-8 h-8 rounded-full bg-google-blueLight text-google-blue flex items-center justify-center">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
                     </div>
                     <div>
                       <div class="text-[10px] text-google-textTertiary">EMAIL</div>
-                      <div class="text-google-textPrimary group-hover:text-google-blue font-medium">nico.care96@gmail.com</div>
+                      <div class="text-google-textPrimary group-hover:text-google-blue font-medium">
+                        nico.care96@gmail.com</div>
                     </div>
                   </div>
-                  <span class="text-[10px] text-google-textTertiary group-hover:text-google-blue transition-colors">Copy</span>
+                  <span
+                    class="text-[10px] text-google-textTertiary group-hover:text-google-blue transition-colors">Copy</span>
                 </button>
 
-                <button onclick="copyToClipboard('+54 11 5800-8500', 'Phone number copied!')" class="w-full p-3.5 rounded-2xl bg-google-surfaceAlt border border-google-borderSubtle hover:border-google-green flex items-center justify-between group transition-all text-left">
+                <button onclick="copyToClipboard('+54 11 5800-8500', 'Phone number copied!')"
+                  class="w-full p-3.5 rounded-2xl bg-google-surfaceAlt border border-google-borderSubtle hover:border-google-green flex items-center justify-between group transition-all text-left">
                   <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-full bg-google-greenLight text-google-green flex items-center justify-center">
-                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                    <div
+                      class="w-8 h-8 rounded-full bg-google-greenLight text-google-green flex items-center justify-center">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
                     </div>
                     <div>
                       <div class="text-[10px] text-google-textTertiary">PHONE</div>
-                      <div class="text-google-textPrimary group-hover:text-google-green font-medium">+54 11 5800-8500</div>
+                      <div class="text-google-textPrimary group-hover:text-google-green font-medium">+54 11 5800-8500
+                      </div>
                     </div>
                   </div>
-                  <span class="text-[10px] text-google-textTertiary group-hover:text-google-green transition-colors">Copy</span>
+                  <span
+                    class="text-[10px] text-google-textTertiary group-hover:text-google-green transition-colors">Copy</span>
                 </button>
 
-                <div class="w-full p-3.5 rounded-2xl bg-google-surfaceAlt border border-google-borderSubtle flex items-center gap-3">
-                  <div class="w-8 h-8 rounded-full bg-google-yellowLight text-google-yellow flex items-center justify-center">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                <div
+                  class="w-full p-3.5 rounded-2xl bg-google-surfaceAlt border border-google-borderSubtle flex items-center gap-3">
+                  <div
+                    class="w-8 h-8 rounded-full bg-google-yellowLight text-google-yellow flex items-center justify-center">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
                   </div>
                   <div>
                     <div class="text-[10px] text-google-textTertiary">LOCATION</div>
@@ -917,28 +1179,40 @@
               <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-4">
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label class="block text-xs font-medium text-google-textSecondary mb-1.5" for="name">Your Name</label>
-                    <input type="text" id="name" required placeholder="Jane Doe" class="w-full px-4 py-2.5 rounded-2xl bg-white border border-google-border text-sm text-google-textPrimary placeholder-google-textTertiary focus:outline-none focus:border-google-blue transition-colors" />
+                    <label class="block text-xs font-medium text-google-textSecondary mb-1.5" for="name">Your
+                      Name</label>
+                    <input type="text" id="name" required placeholder="Jane Doe"
+                      class="w-full px-4 py-2.5 rounded-2xl bg-white border border-google-border text-sm text-google-textPrimary placeholder-google-textTertiary focus:outline-none focus:border-google-blue transition-colors" />
                   </div>
                   <div>
-                    <label class="block text-xs font-medium text-google-textSecondary mb-1.5" for="email">Your Email</label>
-                    <input type="email" id="email" required placeholder="jane@company.com" class="w-full px-4 py-2.5 rounded-2xl bg-white border border-google-border text-sm text-google-textPrimary placeholder-google-textTertiary focus:outline-none focus:border-google-blue transition-colors" />
+                    <label class="block text-xs font-medium text-google-textSecondary mb-1.5" for="email">Your
+                      Email</label>
+                    <input type="email" id="email" required placeholder="jane@company.com"
+                      class="w-full px-4 py-2.5 rounded-2xl bg-white border border-google-border text-sm text-google-textPrimary placeholder-google-textTertiary focus:outline-none focus:border-google-blue transition-colors" />
                   </div>
                 </div>
 
                 <div>
-                  <label class="block text-xs font-medium text-google-textSecondary mb-1.5" for="subject">Subject / Project Scope</label>
-                  <input type="text" id="subject" required placeholder="e.g. Data Science / LLM Project Collaboration" class="w-full px-4 py-2.5 rounded-2xl bg-white border border-google-border text-sm text-google-textPrimary placeholder-google-textTertiary focus:outline-none focus:border-google-blue transition-colors" />
+                  <label class="block text-xs font-medium text-google-textSecondary mb-1.5" for="subject">Subject /
+                    Project Scope</label>
+                  <input type="text" id="subject" required placeholder="e.g. Data Science / LLM Project Collaboration"
+                    class="w-full px-4 py-2.5 rounded-2xl bg-white border border-google-border text-sm text-google-textPrimary placeholder-google-textTertiary focus:outline-none focus:border-google-blue transition-colors" />
                 </div>
 
                 <div>
-                  <label class="block text-xs font-medium text-google-textSecondary mb-1.5" for="message">Message</label>
-                  <textarea id="message" rows="4" required placeholder="Tell me about your goals, stack, or timeline..." class="w-full px-4 py-2.5 rounded-2xl bg-white border border-google-border text-sm text-google-textPrimary placeholder-google-textTertiary focus:outline-none focus:border-google-blue transition-colors resize-none"></textarea>
+                  <label class="block text-xs font-medium text-google-textSecondary mb-1.5"
+                    for="message">Message</label>
+                  <textarea id="message" rows="4" required placeholder="Tell me about your goals, stack, or timeline..."
+                    class="w-full px-4 py-2.5 rounded-2xl bg-white border border-google-border text-sm text-google-textPrimary placeholder-google-textTertiary focus:outline-none focus:border-google-blue transition-colors resize-none"></textarea>
                 </div>
 
-                <button type="submit" class="w-full py-3.5 rounded-full bg-google-blue hover:bg-google-blueHover font-medium text-sm text-white shadow-google-sm transition-all flex items-center justify-center gap-2">
+                <button type="submit"
+                  class="w-full py-3.5 rounded-full bg-google-blue hover:bg-google-blueHover font-medium text-sm text-white shadow-google-sm transition-all flex items-center justify-center gap-2">
                   <span>Send Message</span>
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
                 </button>
               </form>
             </div>
@@ -956,7 +1230,8 @@
         <div class="w-7 h-7 rounded-lg bg-google-blue text-white flex items-center justify-center text-xs font-bold">
           NC
         </div>
-        <span class="text-xs text-google-textSecondary font-medium">Nicolas Carello Laje • Data Scientist & AI/ML Engineer</span>
+        <span class="text-xs text-google-textSecondary font-medium">Nicolas Carello Laje • Data Scientist & AI/ML
+          Engineer</span>
       </div>
 
       <div class="flex items-center gap-6 text-xs text-google-textSecondary">
@@ -964,7 +1239,8 @@
         <a href="#skills" class="hover:text-google-blue transition-colors">Skills</a>
         <a href="#projects" class="hover:text-google-blue transition-colors">Projects</a>
         <a href="#education" class="hover:text-google-blue transition-colors">Education</a>
-        <a href="https://www.linkedin.com/in/nicolas-carello/" target="_blank" rel="noopener noreferrer" class="hover:text-google-blue transition-colors">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/nicolas-carello/" target="_blank" rel="noopener noreferrer"
+          class="hover:text-google-blue transition-colors">LinkedIn</a>
       </div>
 
       <p class="text-xs text-google-textTertiary font-mono">
@@ -974,29 +1250,40 @@
   </footer>
 
   <!-- Project Architecture Details Modal -->
-  <div id="project-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-sm hidden transition-opacity duration-200">
-    <div class="bg-white max-w-2xl w-full rounded-3xl border border-google-border shadow-google-lg overflow-hidden transform scale-95 transition-transform duration-200" id="modal-container">
-      
+  <div id="project-modal"
+    class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-sm hidden transition-opacity duration-200">
+    <div
+      class="bg-white max-w-2xl w-full rounded-3xl border border-google-border shadow-google-lg overflow-hidden transform scale-95 transition-transform duration-200"
+      id="modal-container">
+
       <!-- Modal Header -->
       <div class="p-6 border-b border-google-borderSubtle flex items-center justify-between bg-google-surfaceAlt">
         <div>
-          <span id="modal-badge" class="px-3 py-0.5 rounded-full text-xs font-medium bg-google-blueLight text-google-blue border border-google-blueBorder">Category</span>
+          <span id="modal-badge"
+            class="px-3 py-0.5 rounded-full text-xs font-medium bg-google-blueLight text-google-blue border border-google-blueBorder">Category</span>
           <h3 id="modal-title" class="text-xl font-bold text-google-textPrimary mt-1.5">Project Title</h3>
         </div>
-        <button onclick="closeProjectModal()" class="p-2 text-google-textSecondary hover:text-google-textPrimary rounded-full hover:bg-google-surfaceSubtle transition-colors" aria-label="Close modal">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        <button onclick="closeProjectModal()"
+          class="p-2 text-google-textSecondary hover:text-google-textPrimary rounded-full hover:bg-google-surfaceSubtle transition-colors"
+          aria-label="Close modal">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
         </button>
       </div>
 
       <!-- Modal Body -->
       <div class="p-6 space-y-5 text-sm text-google-textSecondary max-h-[70vh] overflow-y-auto">
         <div>
-          <h4 class="text-xs uppercase font-mono tracking-wider text-google-textTertiary mb-1.5">Architecture Overview</h4>
-          <p id="modal-overview" class="leading-relaxed text-google-textPrimary">Detailed architecture description...</p>
+          <h4 class="text-xs uppercase font-mono tracking-wider text-google-textTertiary mb-1.5">Architecture Overview
+          </h4>
+          <p id="modal-overview" class="leading-relaxed text-google-textPrimary">Detailed architecture description...
+          </p>
         </div>
 
         <div>
-          <h4 class="text-xs uppercase font-mono tracking-wider text-google-textTertiary mb-2">Key Engineering Accomplishments</h4>
+          <h4 class="text-xs uppercase font-mono tracking-wider text-google-textTertiary mb-2">Key Engineering
+            Accomplishments</h4>
           <ul id="modal-bullets" class="space-y-1.5 font-mono text-xs text-google-textSecondary">
             <!-- Populated dynamically -->
           </ul>
@@ -1012,11 +1299,16 @@
 
       <!-- Modal Footer -->
       <div class="p-5 border-t border-google-borderSubtle bg-google-surfaceAlt flex items-center justify-between">
-        <a id="modal-repo-link" href="https://github.com/Nicocarello" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-full bg-google-textPrimary hover:bg-black text-xs font-mono font-medium text-white transition-colors flex items-center gap-2">
-          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        <a id="modal-repo-link" href="https://github.com/Nicocarello" target="_blank" rel="noopener noreferrer"
+          class="px-4 py-2 rounded-full bg-google-textPrimary hover:bg-black text-xs font-mono font-medium text-white transition-colors flex items-center gap-2">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+          </svg>
           <span>View GitHub Repo</span>
         </a>
-        <button onclick="closeProjectModal()" class="px-5 py-2 rounded-full text-xs font-semibold text-google-textSecondary hover:text-google-textPrimary hover:bg-google-surfaceSubtle transition-all">
+        <button onclick="closeProjectModal()"
+          class="px-5 py-2 rounded-full text-xs font-semibold text-google-textSecondary hover:text-google-textPrimary hover:bg-google-surfaceSubtle transition-all">
           Close
         </button>
       </div>
@@ -1100,7 +1392,7 @@
     }
 
     // Close modal on click outside
-    document.getElementById('project-modal').addEventListener('click', function(e) {
+    document.getElementById('project-modal').addEventListener('click', function (e) {
       if (e.target === this) {
         closeProjectModal();
       }
@@ -1176,4 +1468,5 @@
     }
   </script>
 </body>
+
 </html>
