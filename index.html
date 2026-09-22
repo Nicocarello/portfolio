@@ -936,9 +936,16 @@
               <button onclick="openProjectModal('portal-analytics')" class="text-xs font-semibold text-google-blue hover:text-google-blueHover flex items-center gap-1">
                 View Insights <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
               </button>
-              <a href="https://github.com/Nicocarello/portal-analytics/blob/main/portal_challenge.ipynb" target="_blank" rel="noopener noreferrer" class="p-2 rounded-full hover:bg-google-surfaceSubtle text-google-textSecondary hover:text-google-textPrimary transition-colors" title="View Jupyter Notebook on GitHub">
-                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-              </a>
+              <div class="flex items-center gap-1.5">
+                <a href="https://datastudio.google.com/u/0/reporting/8e0d936e-219d-4d2f-a0d8-49a271a48096/page/AsT9F/edit" target="_blank" rel="noopener noreferrer" class="p-2 rounded-full hover:bg-google-blueLight text-google-textSecondary hover:text-google-blue transition-colors group/dash" title="Open Looker Studio Dashboard">
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 20V10M12 20V4M6 20v-6"/>
+                  </svg>
+                </a>
+                <a href="https://github.com/Nicocarello/portal-analytics/blob/main/portal_challenge.ipynb" target="_blank" rel="noopener noreferrer" class="p-2 rounded-full hover:bg-google-surfaceSubtle text-google-textSecondary hover:text-google-textPrimary transition-colors" title="View Jupyter Notebook on GitHub">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -1278,15 +1285,24 @@
       </div>
 
       <!-- Modal Footer -->
-      <div class="p-5 border-t border-google-borderSubtle bg-google-surfaceAlt flex items-center justify-between">
-        <a id="modal-repo-link" href="https://github.com/Nicocarello" target="_blank" rel="noopener noreferrer"
-          class="px-4 py-2 rounded-full bg-google-textPrimary hover:bg-black text-xs font-mono font-medium text-white transition-colors flex items-center gap-2">
-          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-            <path
-              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-          </svg>
-          <span>View GitHub Repo</span>
-        </a>
+      <div class="p-5 border-t border-google-borderSubtle bg-google-surfaceAlt flex flex-wrap items-center justify-between gap-3">
+        <div class="flex items-center gap-2">
+          <a id="modal-dashboard-link" href="#" target="_blank" rel="noopener noreferrer"
+            class="px-4 py-2 rounded-full bg-google-blue hover:bg-google-blueHover text-xs font-medium text-white transition-colors flex items-center gap-2 shadow-sm">
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 20V10M12 20V4M6 20v-6"/>
+            </svg>
+            <span>Live Looker Studio</span>
+          </a>
+          <a id="modal-repo-link" href="https://github.com/Nicocarello" target="_blank" rel="noopener noreferrer"
+            class="px-4 py-2 rounded-full bg-google-textPrimary hover:bg-black text-xs font-mono font-medium text-white transition-colors flex items-center gap-2">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+            </svg>
+            <span>View GitHub Repo</span>
+          </a>
+        </div>
         <button onclick="closeProjectModal()"
           class="px-5 py-2 rounded-full text-xs font-semibold text-google-textSecondary hover:text-google-textPrimary hover:bg-google-surfaceSubtle transition-all">
           Close
@@ -1303,14 +1319,16 @@
         title: 'Portal Analytics & Reader Funnel Intelligence',
         badge: 'BI & Analytics',
         repoUrl: 'https://github.com/Nicocarello/portal-analytics/blob/main/portal_challenge.ipynb',
-        overview: 'Comprehensive exploratory data analysis (EDA) of digital news portal audience behavior. Analyzed user navigation paths, session frequencies, and conversion mechanics across the entire reader lifecycle (Anonymous 57.2%, Registered 28.3%, Paying Subscribers 14.6%). Cleaned 5-minute inactivity autorefresh noise, isolated high-frequency outliers (>3.5 IQR), and evaluated content engagement by publishing section, author performance, and device preference (60% Mobile vs 40% Desktop).',
+        dashboardUrl: 'https://datastudio.google.com/u/0/reporting/8e0d936e-219d-4d2f-a0d8-49a271a48096/page/AsT9F/edit',
+        overview: 'Comprehensive exploratory data analysis (EDA) and interactive dashboard of digital news portal audience behavior. Analyzed user navigation paths, session frequencies, and conversion mechanics across the entire reader lifecycle (Anonymous 57.2%, Registered 28.3%, Paying Subscribers 14.6%). Cleaned 5-minute inactivity autorefresh noise, isolated high-frequency outliers (>3.5 IQR), and evaluated content engagement by publishing section, author performance, and device preference (60% Mobile vs 40% Desktop).',
         bullets: [
           'Audience Classification: Segmented users into a 3-tier hierarchy (Anonymous / Registered / Subscriber) identifying key paywall friction points.',
           'Session & Traffic Hygiene: Filtered automated 5-min inactivity autorefreshes and analyzed true organic browsing duration and session volume.',
           'Frequency Analytics: Uncovered average subscriber retention habits (~1.34 - 1.54 sessions/day) with a core daily reader median of 1.0 session.',
+          'Interactive Looker Studio: Built live executive reporting on reader journeys, churn risk, and platform device usage.',
           'Content & Device Attribution: Evaluated top performing content categories and mapped cross-device engagement patterns (Mobile dominance vs. Desktop retention).'
         ],
-        tags: ['Python', 'Pandas', 'EDA', 'Matplotlib', 'Seaborn', 'Data Modeling', 'Business Intelligence', 'Paywall Analytics', 'Jupyter Notebook']
+        tags: ['Python', 'Pandas', 'Looker Studio', 'EDA', 'Matplotlib', 'Seaborn', 'Data Modeling', 'Business Intelligence', 'Paywall Analytics', 'Jupyter Notebook']
       }
     };
 
@@ -1350,6 +1368,16 @@
 
       if (project.repoUrl) {
         document.getElementById('modal-repo-link').href = project.repoUrl;
+      }
+
+      const dashLink = document.getElementById('modal-dashboard-link');
+      if (dashLink) {
+        if (project.dashboardUrl) {
+          dashLink.href = project.dashboardUrl;
+          dashLink.style.display = 'inline-flex';
+        } else {
+          dashLink.style.display = 'none';
+        }
       }
 
       const bulletsContainer = document.getElementById('modal-bullets');
