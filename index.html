@@ -889,24 +889,111 @@
         <!-- Projects Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-container">
 
+          <!-- Project: CABA Real Estate Property Valuation & ML Engine -->
+          <div class="project-card g-card rounded-3xl overflow-hidden flex flex-col justify-between group"
+            data-category="ml">
+            <div>
+              <div class="p-6 bg-gradient-to-br from-green-50/60 to-white border-b border-google-borderSubtle">
+                <div class="flex items-center justify-between mb-3">
+                  <span
+                    class="px-3 py-1 rounded-full text-xs font-medium bg-white text-google-green border border-green-200 shadow-sm font-mono">
+                    Python &bull; XGBoost &bull;
+                  </span>
+                  <span
+                    class="text-xs text-google-green font-semibold font-mono bg-google-greenLight px-2.5 py-0.5 rounded-full">Machine
+                    Learning</span>
+                </div>
+                <h3
+                  class="text-lg font-bold text-google-textPrimary group-hover:text-google-blue transition-colors cursor-pointer"
+                  onclick="openProjectModal('caba-real-estate')">
+                  CABA Real Estate ML Valuation Engine
+                </h3>
+              </div>
+
+              <div class="p-6 space-y-4">
+                <p class="text-xs text-google-textSecondary leading-relaxed">
+                  End-to-end Machine Learning property valuation system for Capital Federal (CABA). Features automated
+                  GCBA USIG geocoding, champion XGBoost regression, and micro-market qualitative calibrations.
+                </p>
+                <div class="space-y-1.5 text-xs text-google-textSecondary">
+                  <div class="flex items-start gap-2">
+                    <span class="text-google-green font-bold shrink-0 mt-0.5">✓</span>
+                    <span>High precision: R² = 0.906 &bull; 10.37% MdAPE &bull; $32.2k USD MAE</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <span class="text-google-blue font-bold shrink-0 mt-0.5">✓</span>
+                    <span>Real-world Zonaprop validation (12.7% MdAPE) &amp; GCBA USIG geocoding</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <span class="text-google-yellow font-bold shrink-0 mt-0.5">✓</span>
+                    <span>Non-linear surface damping, disposition adjustments &amp; dual frontend UI</span>
+                  </div>
+                </div>
+                <div class="flex flex-wrap gap-1.5 pt-2">
+                  <span
+                    class="text-[11px] px-2.5 py-0.5 rounded-full bg-google-surfaceSubtle text-google-textSecondary font-mono">Python</span>
+                  <span
+                    class="text-[11px] px-2.5 py-0.5 rounded-full bg-google-surfaceSubtle text-google-textSecondary font-mono">XGBoost</span>
+                  <span
+                    class="text-[11px] px-2.5 py-0.5 rounded-full bg-google-surfaceSubtle text-google-textSecondary font-mono">Scikit-Learn</span>
+                  <span
+                    class="text-[11px] px-2.5 py-0.5 rounded-full bg-google-surfaceSubtle text-google-textSecondary font-mono">SHAP</span>
+                  <span
+                    class="text-[11px] px-2.5 py-0.5 rounded-full bg-google-surfaceSubtle text-google-textSecondary font-mono">GCBA
+                    USIG</span>
+                  <span
+                    class="text-[11px] px-2.5 py-0.5 rounded-full bg-google-surfaceSubtle text-google-textSecondary font-mono">React
+                    19 / Vite</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6 pt-0 border-t border-google-borderSubtle mt-2 flex items-center justify-between">
+              <button onclick="openProjectModal('caba-real-estate')"
+                class="text-xs font-semibold text-google-blue hover:text-google-blueHover flex items-center gap-1">
+                View Insights <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </button>
+              <div class="flex items-center gap-1.5">
+                <a href="https://github.com/Nicocarello/real-estate-caba" target="_blank" rel="noopener noreferrer"
+                  class="p-2 rounded-full hover:bg-google-surfaceSubtle text-google-textSecondary hover:text-google-textPrimary transition-colors"
+                  title="View Repository on GitHub">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
           <!-- Project: Portal Analytics & Paywall Reader Intelligence -->
-          <div class="project-card g-card rounded-3xl overflow-hidden flex flex-col justify-between group" data-category="bi">
+          <div class="project-card g-card rounded-3xl overflow-hidden flex flex-col justify-between group"
+            data-category="bi">
             <div>
               <div class="p-6 bg-gradient-to-br from-blue-50/60 to-white border-b border-google-borderSubtle">
                 <div class="flex items-center justify-between mb-3">
-                  <span class="px-3 py-1 rounded-full text-xs font-medium bg-white text-google-blue border border-blue-200 shadow-sm font-mono">
+                  <span
+                    class="px-3 py-1 rounded-full text-xs font-medium bg-white text-google-blue border border-blue-200 shadow-sm font-mono">
                     Python &bull; Pandas &bull; EDA
                   </span>
-                  <span class="text-xs text-google-blue font-semibold font-mono bg-google-blueLight px-2.5 py-0.5 rounded-full">BI & Analytics</span>
+                  <span
+                    class="text-xs text-google-blue font-semibold font-mono bg-google-blueLight px-2.5 py-0.5 rounded-full">BI
+                    & Analytics</span>
                 </div>
-                <h3 class="text-lg font-bold text-google-textPrimary group-hover:text-google-blue transition-colors cursor-pointer" onclick="openProjectModal('portal-analytics')">
+                <h3
+                  class="text-lg font-bold text-google-textPrimary group-hover:text-google-blue transition-colors cursor-pointer"
+                  onclick="openProjectModal('portal-analytics')">
                   Portal Analytics &amp; Reader Funnel Intelligence
                 </h3>
               </div>
 
               <div class="p-6 space-y-4">
                 <p class="text-xs text-google-textSecondary leading-relaxed">
-                  End-to-end exploratory data analysis &amp; behavioral intelligence on web traffic, content engagement, conversion funnel (Anonymous &rarr; Registered &rarr; Subscribers), and paywall monetization.
+                  End-to-end exploratory data analysis &amp; behavioral intelligence on web traffic, content engagement,
+                  conversion funnel (Anonymous &rarr; Registered &rarr; Subscribers), and paywall monetization.
                 </p>
                 <div class="space-y-1.5 text-xs text-google-textSecondary">
                   <div class="flex items-start gap-2">
@@ -923,27 +1010,47 @@
                   </div>
                 </div>
                 <div class="flex flex-wrap gap-1.5 pt-2">
-                  <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-google-surfaceSubtle text-google-textSecondary font-mono">Python</span>
-                  <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-google-surfaceSubtle text-google-textSecondary font-mono">Pandas</span>
-                  <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-google-surfaceSubtle text-google-textSecondary font-mono">EDA</span>
-                  <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-google-surfaceSubtle text-google-textSecondary font-mono">Matplotlib/Seaborn</span>
-                  <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-google-surfaceSubtle text-google-textSecondary font-mono">Data Modeling</span>
+                  <span
+                    class="text-[11px] px-2.5 py-0.5 rounded-full bg-google-surfaceSubtle text-google-textSecondary font-mono">Python</span>
+                  <span
+                    class="text-[11px] px-2.5 py-0.5 rounded-full bg-google-surfaceSubtle text-google-textSecondary font-mono">Pandas</span>
+                  <span
+                    class="text-[11px] px-2.5 py-0.5 rounded-full bg-google-surfaceSubtle text-google-textSecondary font-mono">EDA</span>
+                  <span
+                    class="text-[11px] px-2.5 py-0.5 rounded-full bg-google-surfaceSubtle text-google-textSecondary font-mono">Matplotlib/Seaborn</span>
+                  <span
+                    class="text-[11px] px-2.5 py-0.5 rounded-full bg-google-surfaceSubtle text-google-textSecondary font-mono">Data
+                    Modeling</span>
                 </div>
               </div>
             </div>
 
             <div class="p-6 pt-0 border-t border-google-borderSubtle mt-2 flex items-center justify-between">
-              <button onclick="openProjectModal('portal-analytics')" class="text-xs font-semibold text-google-blue hover:text-google-blueHover flex items-center gap-1">
-                View Insights <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              <button onclick="openProjectModal('portal-analytics')"
+                class="text-xs font-semibold text-google-blue hover:text-google-blueHover flex items-center gap-1">
+                View Insights <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
               </button>
               <div class="flex items-center gap-1.5">
-                <a href="https://datastudio.google.com/u/0/reporting/8e0d936e-219d-4d2f-a0d8-49a271a48096/page/AsT9F/edit" target="_blank" rel="noopener noreferrer" class="p-2 rounded-full hover:bg-google-blueLight text-google-textSecondary hover:text-google-blue transition-colors group/dash" title="Open Looker Studio Dashboard">
-                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M18 20V10M12 20V4M6 20v-6"/>
+                <a href="https://datastudio.google.com/u/0/reporting/8e0d936e-219d-4d2f-a0d8-49a271a48096/page/AsT9F/edit"
+                  target="_blank" rel="noopener noreferrer"
+                  class="p-2 rounded-full hover:bg-google-blueLight text-google-textSecondary hover:text-google-blue transition-colors group/dash"
+                  title="Open Looker Studio Dashboard">
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 20V10M12 20V4M6 20v-6" />
                   </svg>
                 </a>
-                <a href="https://github.com/Nicocarello/portal-analytics/blob/main/portal_challenge.ipynb" target="_blank" rel="noopener noreferrer" class="p-2 rounded-full hover:bg-google-surfaceSubtle text-google-textSecondary hover:text-google-textPrimary transition-colors" title="View Jupyter Notebook on GitHub">
-                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                <a href="https://github.com/Nicocarello/portal-analytics/blob/main/portal_challenge.ipynb"
+                  target="_blank" rel="noopener noreferrer"
+                  class="p-2 rounded-full hover:bg-google-surfaceSubtle text-google-textSecondary hover:text-google-textPrimary transition-colors"
+                  title="View Jupyter Notebook on GitHub">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -1285,12 +1392,14 @@
       </div>
 
       <!-- Modal Footer -->
-      <div class="p-5 border-t border-google-borderSubtle bg-google-surfaceAlt flex flex-wrap items-center justify-between gap-3">
+      <div
+        class="p-5 border-t border-google-borderSubtle bg-google-surfaceAlt flex flex-wrap items-center justify-between gap-3">
         <div class="flex items-center gap-2">
           <a id="modal-dashboard-link" href="#" target="_blank" rel="noopener noreferrer"
             class="px-4 py-2 rounded-full bg-google-blue hover:bg-google-blueHover text-xs font-medium text-white transition-colors flex items-center gap-2 shadow-sm">
-            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 20V10M12 20V4M6 20v-6"/>
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 20V10M12 20V4M6 20v-6" />
             </svg>
             <span>Live Looker Studio</span>
           </a>
@@ -1329,6 +1438,22 @@
           'Content & Device Attribution: Evaluated top performing content categories and mapped cross-device engagement patterns (Mobile dominance vs. Desktop retention).'
         ],
         tags: ['Python', 'Pandas', 'Looker Studio', 'EDA', 'Matplotlib', 'Seaborn', 'Data Modeling', 'Business Intelligence', 'Paywall Analytics', 'Jupyter Notebook']
+      },
+      'caba-real-estate': {
+        title: 'CABA Real Estate Property Valuation & Machine Learning Engine',
+        badge: 'Machine Learning',
+        repoUrl: 'https://github.com/Nicocarello/real-estate-caba',
+        dashboardUrl: null,
+        overview: 'End-to-end Machine Learning property valuation system for Capital Federal (CABA), Argentina. Trained on real estate transaction data and validated against live scraped listings from Zonaprop CABA. Combines official GCBA USIG API geocoding for automated address and intersection resolution, an XGBoost champion regression model with non-linear surface damping, micro-market qualitative calibrations (walk-up floors, disposition discounts, heteroskedastic uncertainty intervals), and dual UI frontends (lightweight Python service and React 19 / Material UI 6 web app).',
+        bullets: [
+          'Predictive Benchmark: Certified on 5-Fold Stratified Cross-Validation & holdout test sets (R² = 0.906, MdAPE = 10.37%, MAE = $32,263 USD).',
+          'Live Market Validation: Evaluated against live listings scraped from Zonaprop CABA, achieving a 12.70% Median Absolute Error.',
+          'Economic Alignment: Modeled directly in nominal cash USD to reflect Argentine market transaction realities (bypassing synthetic US-CPI inflation distortions).',
+          'Domain-Specific Calibrations: Non-linear surface damping (> 150 m²), walk-up apartment adjustments (-15%), disposition discounts ("contrafrente" -4%, "interno" -10%), and dynamic uncertainty bands (10.4% up to 20%).',
+          'Official GCBA USIG Geocoding: Automated coordinate mapping across Buenos Aires streets and intersections with automatic neighborhood centroid fallback.',
+          'Dual Frontend Architecture: Python HTTP microservice (:8501) with zero-dependency HTML5 UI, plus modern React 19 + TypeScript + Material UI 6 web app (:5173).'
+        ],
+        tags: ['Python', 'XGBoost', 'Machine Learning', 'Scikit-Learn', 'SHAP', 'GCBA USIG API', 'React 19', 'Material UI 6', 'TypeScript', 'FastAPI', 'Joblib', 'Parquet', 'EDA', 'Pytest']
       }
     };
 
